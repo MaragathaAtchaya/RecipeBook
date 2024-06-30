@@ -4,5 +4,5 @@ export interface Recipes {
     method: string
     ingredients: string
     authorName: string
-    date: string
+    date: Date
   }

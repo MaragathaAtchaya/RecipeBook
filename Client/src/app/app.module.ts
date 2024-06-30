@@ -12,21 +12,24 @@ import { HomeComponent } from './home/home.component';
 import { ItemsModule } from './items/items.module';
 import { ItemsComponent } from './items/items.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,    
     HomeComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ItemsModule   
+    ItemsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

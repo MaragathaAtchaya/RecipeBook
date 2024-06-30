@@ -23,6 +23,10 @@ export class ItemsService {
     // 'https://localhost:7299/recipebook/Recipe/id?id=1
 
     return this.http.get<Recipes>(this.baseUrl+'Recipe/id?id='+id);
-
   }
+
+  addItem(item: Recipes) {
+    return this.http.post<Recipes>(this.baseUrl + 'Recipe', item);
+  }
+
 }
