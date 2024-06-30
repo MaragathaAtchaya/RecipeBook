@@ -7,7 +7,8 @@ import { Recipes } from '../Models/recipes';
 })
 export class ItemsService {
 
-  baseUrl = 'https://localhost:7299/recipebook/';
+  // baseUrl = 'https://localhost:7299/recipebook/';
+  baseUrl = 'http://recipebook2-env.eba-jpz4nuxi.ap-southeast-2.elasticbeanstalk.com/recipebook/';
   item?: Recipes;
 
   constructor(private http: HttpClient) { }
