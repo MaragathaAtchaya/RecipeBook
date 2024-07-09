@@ -1,20 +1,36 @@
-  <form (ngSubmit)="onSubmit()">
+<div class="container-fluid">
+ <form (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label for="name" class="form-label" >Name: </label>
       <input type="text" class="form-control" id="name" [(ngModel)]="item.name" name="name" required>
     </div>
     <div class="mb-3">
         <label for="method" class="form-label" >Method: </label>
-        <input type="text" class="form-control" id="method" [(ngModel)]="item.method" name="method" required>
+        <textarea class="form-control" id="method" [(ngModel)]="item.method" name="method" required></textarea>
       </div>
       <div class="mb-3">
         <label for="ingredients" class="form-label" >Ingredients: </label>
-        <input type="text" class="form-control" id="ingredients" [(ngModel)]="item.ingredients" name="ingredients" required>
+        <textarea  class="form-control" id="ingredients" [(ngModel)]="item.ingredients" name="ingredients" required></textarea>
       </div>
+ 
       <div class="mb-3">
         <label for="authorname" class="form-label" >Author: </label>
         <input type="text" class="form-control" id="authorname" [(ngModel)]="item.authorName" name="authorname" required>
       </div>
+     
+      <div class="row" style="margin-bottom:15px;">
+        <div class="col-md-3">
+          <input type="file" (change)="onFileChanged($event)">
+          <!-- <button (click)="onUpload()">Upload Image</button> -->
+        </div>
+        
+      </div>
+
+
+      <button type="submit" class="btn btn-dark" style="margin-right: 10px;">Submit</button>
       
-    <button type="submit" class="btn btn-dark">Submit</button>
+    <button type="submit" class="btn btn-outline-secondary">Reset</button>
+
+
   </form>
+  </div>

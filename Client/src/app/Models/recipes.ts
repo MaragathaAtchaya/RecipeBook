@@ -5,4 +5,5 @@ export interface Recipes {
     ingredients: string
     authorName: string
     date: Date
+    imageName: string
   }
